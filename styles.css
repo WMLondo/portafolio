@@ -1,0 +1,550 @@
+*,*:before,*:after {
+    padding: 0;
+    margin: 0;
+    outline:0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(https://i.blogs.es/341980/portada2/1366_2000.jpg);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    overflow-x: hidden;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    font-size: 16px;
+}
+
+.menu {
+    height:100px;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.header__logo {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 30px
+}
+
+.menu__item {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu__item li a {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: #0f3460;
+    font-weight: bold;
+}
+
+.menu__item li a.active {
+    color: #e94560;
+}
+
+.menu__item li a:hover{
+    color: #e94560;
+    transition: .4s;
+}
+
+.menu__item ul.dropdown-submenu-generos{
+    position: absolute;
+    width: 20px;
+    min-width: 160px;
+    flex-direction: column;
+    background-color:#1a1a2e;
+    border-radius: 5px;
+    -webkit-box-shadow: 6px 10px 13px -6px rgba(0,0,0,0.59);
+    -moz-box-shadow: 6px 10px 13px -6px rgba(0,0,0,0.59);
+    box-shadow: 6px 10px 13px -6px rgba(0,0,0,0.59);
+}
+
+.dropdown-submenu-generos li {
+    margin: 2px 5px;
+    display: none;
+}
+
+.menu__item li:hover .dropdown-submenu-generos li{
+    display: block;
+}
+
+.dropdown-submenu-generos li a {
+    text-align: center;
+    color:#e94560;
+    font-weight: lighter;
+}
+
+
+.dropdown-submenu-generos li:hover a{
+    background-color: #e94560;
+    color:#0f3460;
+}
+
+.btnmenu,#check {
+    display: none;
+}
+
+main {
+    margin-top: 150px;
+    width: 100%;
+    height: 100vh;
+}
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    height: 50%;
+    justify-content:center;
+    align-items: center;
+}
+
+.main__text h1{
+    font-weight: bolder;
+}
+
+.main__text h1,.main__text span p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 30px;
+    text-transform: uppercase;
+    color:#0f3460;
+}
+
+.main_btn{
+    margin-top: 50px;
+    display: flex;   
+}
+
+.main_btn div a  {
+    display: block;
+    padding: 15px 5px;
+    margin: 0px 40px;
+    background-color: #fff;
+    border:3px solid #16213e;
+    border-radius:25px;
+}
+
+.main_btn .main_conocer a{
+    color: #16213e;
+    text-decoration: none;
+    
+}
+
+.main_btn div.main_unete a{
+    background-color: #16213e;
+    border-color: #ffffff;
+}
+
+.main_btn div.main_unete a {
+    text-decoration: none;
+    color:#fff;
+}
+
+.main_btn div.main_unete a:hover {
+    transition: background-color,border-color,color ease-in .5s ;
+    background-color: #ffffff;
+    border-color: #16213e;
+    color: #16213e;
+}
+
+.main_btn div.main_conocer a:hover{
+    transition: background-color,border-color,color ease-in .5s ;
+    background-color: #16213e;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.main__acerca{
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background: #fff;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 50px;
+    border-bottom:10px solid #1a1a2e;
+}
+
+.main__acerca h5 {
+    margin: 20px 50px; 
+    font-size: 40px;
+    color: #0f3460;
+}
+
+.main__acerca div.acerca-personas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.main__acerca div.acerca-personas div {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: auto;
+    margin: 30px;
+    box-shadow: 0px 30px 30px 30px solid #000;
+    border: 3px solid #e94560;
+    align-items: center;
+    -webkit-box-shadow: 10px 22px 36px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 22px 36px -19px rgba(0,0,0,0.75);
+    box-shadow: 10px 22px 36px -19px rgba(0,0,0,0.75);
+}
+
+.main__acerca div img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.main__acerca div h2, .main__acerca div h3, .main__acerca div h4 {
+    margin-bottom: 30px;
+    color: #0f3460;
+    font-size: 20px;
+}
+
+.main__acerca div p {
+    margin:0px 50px 20px 50px;
+    text-align: justify;
+    color: #0f3460;
+    font-size:16px;
+}
+
+.main__acerca div.acerca-personas div {
+    transition:transform .3s;
+}
+
+.main__acerca div.acerca-personas div:hover{
+    transform:scale(1.1);
+    z-index: 200;
+}
+
+.main__generos{
+    width: 100vw;
+    background-color: #16213e;
+    height: auto;
+    text-align: center;
+}
+
+
+
+.main__generos h6 {
+    margin:40px;
+    display: inline-block;
+    color: #e94560;
+    font-size:40px;
+}
+
+.generos-content a{
+    text-decoration: none;
+}
+
+.main__generos div.generos-content{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.main__generos div.generos-content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin:30px;
+    border-bottom: 2px solid #e94560;
+    border-radius: 5%;
+    transition:background ease-out 1.5s;
+}
+
+.generos-series-japonesas{
+    background: url(https://i.pinimg.com/originals/e9/66/12/e966127359ac394a67e98a315b089e12.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.generos-series-japonesas:hover, .generos-series-japonesas:active{
+    background-position: center;
+}
+
+.generos-peliculas{
+    background: url(https://i.blogs.es/738916/mejores-peliculas/1366_2000.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.generos-peliculas:hover,.generos-peliculas:active{
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+.generos-tecnologia{
+    background: url(https://empresas.blogthinkbig.com/wp-content/uploads/2020/01/La-reinvenci%C3%B3n-de-la-tecnolog%C3%ADa-no-se-detiene-lo-que-debes-saber-para-no-quedarte-al-margen.jpg?w=800);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.generos-tecnologia:hover,.generos-tecnologia:active{
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+.generos-libros{
+    background: url(https://s1.eestatic.com/2019/07/01/como/Libros-Estudiantes-Universidad-Investigacion_cientifica-Como_hacer_410470522_127023887_1706x960.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.generos-libros:hover,.generos-libros:active{
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+.generos-series{
+    background: url(https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/03/17/15844722135123.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.generos-series:hover,.generos-series:active{
+    background-position: 100% 100%;
+    cursor: pointer;
+}
+
+.generos-musica{
+    background: url(https://i1.wp.com/www.sopitas.com/wp-content/uploads/2020/04/10-libros-de-musica-que-todo-melomano-tiene-que-leer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.generos-musica:hover,.generos-musica:active{
+    background-position: 100%;
+    cursor: pointer;
+}
+
+.generos-content div h7,.generos-content div h8,.generos-content div h9,.generos-content div h10,.generos-content div h11,.generos-content div h12{
+    text-align-last: center;
+    padding: 40px;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.5);
+    color: #e94560;
+    font-weight: bold;
+    border: 2px solid #e94560;
+    backdrop-filter: blur(4px);
+}
+
+main div.main__contactanos{
+    background:fixed url(https://i.blogs.es/af17f6/guia-monitores-mac/1366_2000.jpg) no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.main__contactanos div.contactanos-contenedor{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 33, 62, .4);
+    background-size: 100%;
+    height: 100%;
+
+}
+
+.contactanos-contenedor h13{
+    color:#e94560;
+    font-family: 'Caveat', cursive;
+    margin:40px 0px 10px 0px;
+    font-style: italic;
+    font-size: 50px;
+}
+
+.contactanos-contenedor form.contactanos-escribime{
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e94560;
+    margin:30px;
+    margin-bottom: 10%;
+    background-color: rgba(22,33,62,.3);
+    backdrop-filter: blur(2px);
+}
+
+.contactanos-escribime input,.contactanos-escribime textarea{
+    display: flex;
+    margin: 20px 30px;
+    width:80%;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 16px;
+    color:#fff;
+    border: none;
+    border-bottom:2px solid #e94560;
+    background:transparent;
+}
+
+.contactanos-escribime textarea{
+    max-width: 80%;
+    min-height: 250px;
+    resize:none;
+    border:2px solid #e94560;
+}
+
+.contactanos-escribime input::placeholder,.contactanos-escribime textarea::placeholder{
+    color:#ddd;
+}
+
+.contactanos-escribime #escribime-nombre,.contactanos-escribime #escribime-email,.contactanos-escribime #escribime-mensaje{
+    padding: 5px;
+}
+
+.contactanos-escribime #escribime-enviar{
+    transition: background-color ease-in 1s;
+    padding:5;
+    justify-content: center;
+    color:#ddd;
+}
+
+.contactanos-escribime #escribime-enviar:hover,.contactanos-escribime #escribime-enviar:active{
+    background-color: #e94560;
+}
+
+footer{
+    background-color:#000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+}
+
+.footer-texto p{
+    color: #999;;
+}
+
+.footer-redessociales a{
+    cursor: pointer;
+    color: #999;
+    display: inline;
+    text-decoration: none;
+    margin: 0px 25px;
+}
+
+.footer-redessociales a:hover{
+    color: #bbb;
+}
+
+@media only screen and (max-width: 768px)
+{
+    body{
+        background-attachment: scroll;
+    }
+
+    .menu{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .menu .btnmenu{
+        display:flex;
+        background-color:#e94560;
+        border-radius: 5px 5px 5px 5px;
+        width: 60px;
+        margin: 20px 10px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnmenu{
+        color:#16213e;
+        font-weight:bolder;
+        text-decoration: overline;
+    }
+
+    .menu__item{
+        display: block;
+        position:absolute;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        height: 100vh;
+        margin:0;
+        top:20%;
+        right: -100%;
+        width:100vw;
+        text-align:center;
+        z-index: 400;
+        transition: right ease-out 1s;
+    }
+
+    .menu__item ul.dropdown-submenu-generos{
+        width:100%;
+        position: static;
+    }
+    
+    .menu__item ul.dropdown-submenu-generos li {
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    .menu__item .item-genero{
+        pointer-events: none;
+    }
+
+    #check:checked ~ .menu__item{
+        right: 0%;
+    }
+
+    main div.main__text{
+        display: flex;
+        min-width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .main__text{
+        text-align: center;
+    }
+
+    main .main__contactanos{
+        background-attachment: scroll;
+    }
+
+    .main__contactanos .contactanos-contenedor{
+        width: 100%;
+    }
+
+    .contactanos-contenedor form.contactanos-escribime{
+        width: 80%;
+    }
+
+    .contactanos-escribime input,.contactanos-escribime textarea{
+        width: 80%;
+        margin: 50px 30px 50px 30px;
+    }
+}
